@@ -1,15 +1,10 @@
 package com.ingsoft.app.service.rol;
 
-import com.ingsoft.app.model.Rol;
-import com.ingsoft.app.repository.rol.SqlRol;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.net.ResponseCache;
 
 public class ServicioRolCrear {
 
-    public static void grabarRol(Rol obj, javax.servlet.http.HttpServletResponse res) {
+    public static void grabarRol(Rol obj, ResponseCache res) {
         
     }
 }
