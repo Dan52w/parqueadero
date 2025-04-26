@@ -1,9 +1,5 @@
 package src.app.tipoVehiculo.model;
 
-/**
- *
- * @author ESTUDIANTE
- */
 public class TipoVehiculo {
     private int codTipoVehiculo;
     private String claseTipoVehiculo;
