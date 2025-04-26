@@ -1,17 +1,18 @@
 package src.app.login.model;
 
 import java.util.Date;
+import src.app.usuario.model.Usuario;
 
 public class Ingreso {
     private int codIngreso;
-    private int codUsuario;
+    private Usuario codUsuario;
     private Date fechaIngreso;
     private Date horaIngreso;
 
     public Ingreso() {
     }
 
-    public Ingreso(int codIngreso, int codUsuario, Date fechaIngreso, Date horaIngreso) {
+    public Ingreso(int codIngreso, Usuario codUsuario, Date fechaIngreso, Date horaIngreso) {
         this.codIngreso = codIngreso;
         this.codUsuario = codUsuario;
         this.fechaIngreso = fechaIngreso;
@@ -26,11 +27,11 @@ public class Ingreso {
         this.codIngreso = codIngreso;
     }
 
-    public int getCodUsuario() {
+    public Usuario getCodUsuario() {
         return codUsuario;
     }
 
-    public void setCodUsuario(int codUsuario) {
+    public void setCodUsuario(Usuario codUsuario) {
         this.codUsuario = codUsuario;
     }
 

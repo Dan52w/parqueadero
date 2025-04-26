@@ -1,7 +1,9 @@
 package src.app.login.model;
 
+import src.app.usuario.model.Usuario;
+
 public class Acceso {
-    private int codUsuario;
+    private Usuario codUsuario;
     private String correoAcceso;
     private String claveAcceso;
     private String uuidAcceso;
@@ -9,18 +11,18 @@ public class Acceso {
     public Acceso() {
     }
 
-    public Acceso(int codUsuario, String correoAcceso, String claveAcceso, String uuidAcceso) {
+    public Acceso(Usuario codUsuario, String correoAcceso, String claveAcceso, String uuidAcceso) {
         this.codUsuario = codUsuario;
         this.correoAcceso = correoAcceso;
         this.claveAcceso = claveAcceso;
         this.uuidAcceso = uuidAcceso;
     }
 
-    public int getCodUsuario() {
+    public Usuario getCodUsuario() {
         return codUsuario;
     }
 
-    public void setCodUsuario(int codUsuario) {
+    public void setCodUsuario(Usuario codUsuario) {
         this.codUsuario = codUsuario;
     }
 

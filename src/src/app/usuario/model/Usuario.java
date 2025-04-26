@@ -3,7 +3,7 @@ package src.app.usuario.model;
 import java.util.Date;
 import src.app.rol.model.Rol;
 
-public class Usuarios {
+public class Usuario {
     private int codUsuario;
     private Rol codRol;
     private String documentoUsuario;
@@ -13,10 +13,10 @@ public class Usuarios {
     private Date fechaNacimientoUsuario;
     private String telefonoUsuario;
 
-    public Usuarios() {
+    public Usuario() {
     }
 
-    public Usuarios(int codUsuario, Rol codRol, String documentoUsuario, String nombresUsuario, String apellidosUsuario, int generoUsuario, Date fechaNacimientoUsuario, String telefonoUsuario) {
+    public Usuario(int codUsuario, Rol codRol, String documentoUsuario, String nombresUsuario, String apellidosUsuario, int generoUsuario, Date fechaNacimientoUsuario, String telefonoUsuario) {
         this.codUsuario = codUsuario;
         this.codRol = codRol;
         this.documentoUsuario = documentoUsuario;

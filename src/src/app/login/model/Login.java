@@ -1,26 +1,29 @@
 package src.app.login.model;
 
+import src.app.rol.model.Rol;
+import src.app.usuario.model.Usuario;
+
 public class Login {
-    private int codUsuario;
+    private Usuario codUsuario;
     private String nombreUsuario;
-    private int codRol;
+    private Rol codRol;
     private String nombreRol;
 
     public Login() {
     }
 
-    public Login(int codUsuario, String nombreUsuario, int codRol, String nombreRol) {
+    public Login(Usuario codUsuario, String nombreUsuario, Rol codRol, String nombreRol) {
         this.codUsuario = codUsuario;
         this.nombreUsuario = nombreUsuario;
         this.codRol = codRol;
         this.nombreRol = nombreRol;
     }
 
-    public int getCodUsuario() {
+    public Usuario getCodUsuario() {
         return codUsuario;
     }
 
-    public void setCodUsuario(int codUsuario) {
+    public void setCodUsuario(Usuario codUsuario) {
         this.codUsuario = codUsuario;
     }
 
@@ -32,11 +35,11 @@ public class Login {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public int getCodRol() {
+    public Rol getCodRol() {
         return codRol;
     }
 
-    public void setCodRol(int codRol) {
+    public void setCodRol(Rol codRol) {
         this.codRol = codRol;
     }
 
