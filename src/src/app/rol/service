@@ -1,0 +1,78 @@
+package com.ingsoft.app.service.rol;
+
+import com.ingsoft.app.model.Rol;
+import com.ingsoft.app.repository.rol.SqlRol;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class ServicioRolCrear {
+
+    public static void grabarRol(Rol obj, javax.servlet.http.HttpServletResponse res) {
+        Connection conexion = null;
+        try {
+            conexion = dbConexion.getConnection();
+            conexion.setAutoCommit(false);
+
+            int caso = 1;
+            Rol objGrabado = null;
+
+            PreparedStatement consultaCantidad = conexion.prepareStatement(SqlRol.HOW_MANY);
+            consultaCantidad.setString(1, obj.getNombreRol());
+            ResultSet resultadoCantidad = consultaCantidad.executeQuery();
+
+            if (resultadoCantidad.next() && resultadoCantidad.getInt("cantidad") == 0) {
+                caso = 2;
+                PreparedStatement insertarRol = conexion.prepareStatement(SqlRol.ADD, PreparedStatement.RETURN_GENERATED_KEYS);
+                insertarRol.setString(1, obj.getNombreRol());
+
+                int filasInsertadas = insertarRol.executeUpdate();
+                if (filasInsertadas > 0) {
+                    ResultSet generatedKeys = insertarRol.getGeneratedKeys();
+                    if (generatedKeys.next()) {
+                        objGrabado = obj; // Simplificación
+                    }
+                }
+            }
+
+            conexion.commit();
+
+            switch (caso) {
+                case 1:
+                    res.setStatus(400);
+                    res.getWriter().write("{\"respuesta\": \"Ya se encuentra repetido ese nombre de rol\"}");
+                    break;
+                default:
+                    res.setStatus(200);
+                    res.getWriter().write("{\"objGrabado\": " + objGrabado.toString() + "}");
+                    break;
+            }
+
+        } catch (Exception e) {
+            if (conexion != null) {
+                try {
+                    conexion.rollback();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            try {
+                res.setStatus(400);
+                res.getWriter().write("{\"respuesta\": \"Error al obtener rol\"}");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            e.printStackTrace();
+        } finally {
+            if (conexion != null) {
+                try {
+                    conexion.setAutoCommit(true);
+                    conexion.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}
