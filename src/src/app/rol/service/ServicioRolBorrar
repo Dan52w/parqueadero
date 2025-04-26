@@ -8,32 +8,6 @@ import java.sql.PreparedStatement;
 public class ServicioRolBorrar {
 
     public static void borrar(Rol obj, javax.servlet.http.HttpServletResponse res) {
-        Connection conexion = null;
-        try {
-            conexion = dbConexion.getConnection();
-            PreparedStatement consulta = conexion.prepareStatement(SqlRol.DELETE);
-            consulta.setInt(1, obj.getCodRol());
-            int filasBorradas = consulta.executeUpdate();
-
-            res.setStatus(200);
-            res.getWriter().write("{\"respuesta\":\"Ya lo borre\",\"filasBorradas\":" + filasBorradas + "}");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            try {
-                res.setStatus(400);
-                res.getWriter().write("{\"respuesta\":\"error eliminando\"}");
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        
     }
 }
