@@ -1,25 +1,19 @@
 package com.ingsoft.app.controller.rol;
 
-import com.ingsoft.app.model.Rol;
+import java.net.Authenticator;
+import java.net.ResponseCache;
 import com.ingsoft.app.service.rol.ServicioRolBorrar;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-public class ControladorRolBorrar extends ServicioRolBorrar {
+public class ControladorRolBorrar {
 
-    public void llamarRolBorrar(HttpServletRequest req, HttpServletResponse res) {
-        try {
-            int codigo = Integer.parseInt(req.getParameter("codRol"));
-            Rol objRol = new Rol(codigo, "");
-            ServicioRolBorrar.borrar(objRol, res);
-        } catch (Exception e) {
-            e.printStackTrace();
-            try {
-                res.setStatus(400);
-                res.getWriter().write("{\"respuesta\":\"Error al borrar\"}");
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        }
+    private final ServicioRolBorrar servicioRolBorrar;
+
+    public ControladorRolBorrar(ServicioRolBorrar servicioRolBorrar) {
+        this.servicioRolBorrar = servicioRolBorrar;
+    }
+
+    public void llamarRolBorrar(Authenticator.RequestorType req, ResponseCache res) {
+    
     }
 }
+
