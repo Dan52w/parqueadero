@@ -9,47 +9,6 @@ import java.sql.ResultSet;
 public class ServicioRolActualizar {
 
     public static void actualizarRol(Rol objRol, javax.servlet.http.HttpServletResponse res) {
-        Connection conexion = null;
-        try {
-            conexion = dbConexion.getConnection();
-            
-            // Primero verificamos si ya existe un rol con ese nombre
-            PreparedStatement consulta = conexion.prepareStatement(SqlRol.HOW_MANY);
-            consulta.setString(1, objRol.getNombreRol());
-            ResultSet resultado = consulta.executeQuery();
-            
-            if (resultado.next() && resultado.getInt("cantidad") > 0) {
-                // Caso 1: Ya existe un rol con ese nombre
-                res.setStatus(400);
-                res.getWriter().write("{\"respuesta\": \"Ya existe el rol\"}");
-                return;
-            }
-            
-            // Caso 2: Procedemos con la actualización
-            consulta = conexion.prepareStatement(SqlRol.UPDATE);
-            consulta.setString(1, objRol.getNombreRol());
-            consulta.setInt(2, objRol.getCodRol());
-            int filasAfectadas = consulta.executeUpdate();
-            
-            res.setStatus(200);
-            res.getWriter().write("{\"respuesta\": \"Ya lo actualicé\", \"detalle\": " + filasAfectadas + "}");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            try {
-                res.setStatus(400);
-                res.getWriter().write("{\"respuesta\": \"Fatal error!!!\"}");
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        } finally {
-            if (conexion != null) {
-                try {
-                    conexion.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+        
     }
 }
