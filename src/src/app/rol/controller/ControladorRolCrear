@@ -4,14 +4,10 @@ import com.ingsoft.app.model.Rol;
 import com.ingsoft.app.service.rol.ServicioRolCrear;
 
 public class ControladorRolCrear {
-
-    // Instancia única (patrón Singleton)
     private static final ControladorRolCrear instancia = new ControladorRolCrear();
     
-    // Constructor privado
     private ControladorRolCrear() {}
     
-    // Método para obtener la instancia
     public static ControladorRolCrear getInstancia() {
         return instancia;
     }
