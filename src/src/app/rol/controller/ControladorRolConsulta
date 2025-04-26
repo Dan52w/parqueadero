@@ -1,12 +1,12 @@
 package com.ingsoft.app.controller.rol;
 
+import java.net.Authenticator;
+import java.net.ResponseCache;
 import com.ingsoft.app.service.rol.ServicioRolConsulta;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 public class ControladorRolConsulta {
 
-    public void llamarObtenerTodos(HttpServletRequest   req, HttpServletResponse res) {
-        ServicioRolConsulta.obtenerTodos(res);
+    public void llamarObtenerTodos(Authenticator.RequestorType req, ResponseCache res) {
+        
     }
 }
