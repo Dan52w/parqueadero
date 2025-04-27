@@ -1,0 +1,29 @@
+package src.app.ingresoServicioOtro.controller;
+
+import java.net.Authenticator;
+import java.net.ResponseCache;
+import src.app.ingresoServicioOtro.service.ServicioIngresoServicioOtro;
+
+public class ControladorIngresoServicioOtro {
+    private final ServicioIngresoServicioOtro servicioIngresoServicioOtro;
+
+    public ControladorIngresoServicioOtro(ServicioIngresoServicioOtro servicioIngresoServicioOtro) {
+        this.servicioIngresoServicioOtro = servicioIngresoServicioOtro;
+    }
+
+    public void llamarActualizarIngresoServicioOtro(Authenticator.RequestorType req, ResponseCache res) {
+
+    }
+
+    public void llamarBorrarIngresoServicioOtro(Authenticator.RequestorType req, ResponseCache res) {
+
+    }
+
+    public void llamarObtenerTodosIngresoServicioOtro(Authenticator.RequestorType req, ResponseCache res) {
+
+    }
+
+    public void llamarGrabarIngresoServicioOtro(Authenticator.RequestorType req, ResponseCache res) {
+
+    }
+}
