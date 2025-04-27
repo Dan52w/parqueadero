@@ -40,5 +40,13 @@ public class RelTurnoUsuario {
     public void setCodUsuario(Usuario codUsuario) {
         this.codUsuario = codUsuario;
     }
+
+    public Object getTurno() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getUsuario() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
