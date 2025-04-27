@@ -1,0 +1,24 @@
+package src.app.tarifaDiaria.service;
+
+import java.net.ResponseCache;
+import java.util.List;
+import src.app.tarifaDiaria.model.TarifaDiaria;
+
+public class ServicioTarifaDiaria {
+
+    public void actualizarTarifaDiaria(TarifaDiaria objTarifaDiaria, ResponseCache res) {
+        
+    }
+
+    public static void borrar(TarifaDiaria objTarifaDiaria, ResponseCache res) {
+        
+    }
+
+    public static List<TarifaDiaria> obtenerTodos() {
+        return null;
+    }
+
+    public static void grabarTarifaDiaria(TarifaDiaria objTarifaDiaria, ResponseCache res) {
+        
+    }
+}
