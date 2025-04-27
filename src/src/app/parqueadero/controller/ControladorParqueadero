@@ -1,0 +1,29 @@
+package src.app.parqueadero.controller;
+
+import java.net.Authenticator;
+import java.net.ResponseCache;
+import src.app.parqueadero.service.ServicioParqueadero;
+
+public class ControladorParqueadero {
+    private final ServicioParqueadero servicioParqueadero;
+
+    public ControladorParqueadero(ServicioParqueadero servicioParqueadero) {
+        this.servicioParqueadero = servicioParqueadero;
+    }
+
+    public void llamarActualizarParqueadero(Authenticator.RequestorType req, ResponseCache res) {
+
+    }
+
+    public void llamarBorrarParqueadero(Authenticator.RequestorType req, ResponseCache res) {
+
+    }
+
+    public void llamarObtenerTodosParqueaderos(Authenticator.RequestorType req, ResponseCache res) {
+
+    }
+
+    public void llamarGrabarParqueadero(Authenticator.RequestorType req, ResponseCache res) {
+
+    }
+}
