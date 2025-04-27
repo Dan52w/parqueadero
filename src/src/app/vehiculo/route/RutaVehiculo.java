@@ -14,7 +14,7 @@ public class RutaVehiculo {
         return null;
     }
 
-    public void borrarVehiculo(Long codVehiculo) {
+    public void borrarVehiculo(int codVehiculo) {
 
     }
 
