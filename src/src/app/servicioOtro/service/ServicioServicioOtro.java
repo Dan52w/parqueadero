@@ -1,24 +1,23 @@
 package src.app.servicioOtro.service;
 
-import java.net.ResponseCache;
-import java.util.List;
 import src.app.servicioOtro.model.ServicioOtro;
+import src.middleware.Response;
 
 public class ServicioServicioOtro {
     
-    public void actualizarServicioOtro(ServicioOtro objServicioOtro, ResponseCache res) {
+    protected void actualizarServicioOtro(ServicioOtro objServicioOtro, Response res) {
 
     }
 
-    public static void borrar(ServicioOtro objServicioOtro, ResponseCache res) {
+    protected static void borrar(ServicioOtro objServicioOtro, Response res) {
 
     }
 
-    public static List<ServicioOtro> obtenerTodos() {
-        return null;
+    protected static void obtenerTodos() {
+        
     }
 
-    public static void grabarServicioOtro(ServicioOtro objServicioOtro, ResponseCache res) {
+    protected static void grabarServicioOtro(ServicioOtro objServicioOtro, Response res) {
 
     }
 }

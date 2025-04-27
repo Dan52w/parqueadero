@@ -1,23 +1,22 @@
 package src.app.puesto.service;
 
-import java.net.ResponseCache;
-import java.util.List;
 import src.app.puesto.model.Puesto;
+import src.middleware.Response;
 
 public class ServicioPuesto {
-    public void actualizarPuesto(Puesto objPuesto, ResponseCache res) {
+    protected static void actualizarPuesto(Puesto objPuesto, Response res) {
 
     }
 
-    public static void borrar(Puesto objPuesto, ResponseCache res) {
+    protected static void borrar(Puesto objPuesto, Response res) {
 
     }
 
-    public static List<Puesto> obtenerTodos() {
-        return null;
+    protected static void obtenerTodos(Response res) {
+        
     }
 
-    public static void grabarPuesto(Puesto objPuesto, ResponseCache res) {
+    protected static void grabarPuesto(Puesto objPuesto, Response res) {
 
     }
 }

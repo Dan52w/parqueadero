@@ -1,29 +1,23 @@
 package src.app.vehiculo.controller;
 
-import java.net.Authenticator;
-import java.net.ResponseCache;
 import src.app.vehiculo.service.ServicioVehiculo;
+import src.middleware.Request;
+import src.middleware.Response;
 
-public class ControladorVehiculo {
-    private final ServicioVehiculo servicioVehiculo;
-
-    public ControladorVehiculo(ServicioVehiculo servicioVehiculo) {
-        this.servicioVehiculo = servicioVehiculo;
-    }
-
-    public void llamarActualizarVehiculo(Authenticator.RequestorType req, ResponseCache res) {
+public class ControladorVehiculo extends ServicioVehiculo{
+    public void llamarActualizarVehiculo(Request req, Response res) {
 
     }
 
-    public void llamarBorrarVehiculo(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarBorrarVehiculo(Request req, Response res) {
 
     }
 
-    public void llamarObtenerTodosVehiculos(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarObtenerTodosVehiculos(Request req, Response res) {
 
     }
 
-    public void llamarGrabarVehiculo(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarGrabarVehiculo(Request req, Response res) {
 
     }
 }

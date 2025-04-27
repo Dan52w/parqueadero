@@ -1,28 +1,22 @@
 package src.app.puesto.controller;
 
-import java.net.Authenticator;
-import java.net.ResponseCache;
 import src.app.puesto.service.ServicioPuesto;
+import src.middleware.Request;
+import src.middleware.Response;
 
-public class ControladorPuesto {
-    private final ServicioPuesto servicioPuesto;
-
-    public ControladorPuesto(ServicioPuesto servicioPuesto) {
-        this.servicioPuesto = servicioPuesto;
+public class ControladorPuesto extends ServicioPuesto {
+    public void llamarActualizarPuesto(Request req, Response res) {
     }
 
-    public void llamarActualizarPuesto(Authenticator.RequestorType req, ResponseCache res) {
-    }
-
-    public void llamarBorrarPuesto(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarBorrarPuesto(Request req, Response res){
 
     }
 
-    public void llamarObtenerTodosPuesto(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarObtenerTodosPuesto(Request req, Response res){
 
     }
 
-    public void llamarGrabarPuesto(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarGrabarPuesto(Request req, Response res) {
 
     }
 }

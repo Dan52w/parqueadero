@@ -1,22 +1,22 @@
 package src.app.usuario.service;
 
-import java.util.List;
 import src.app.usuario.model.Usuario;
+import src.middleware.Response;
 
 public class ServicioUsuario {
-    public static void actualizarUsuario(Usuario obj){
+    protected static void actualizarUsuario(Usuario obj, Response res){
         
     }
-    public static void borrarUsuario(Usuario obj){
+    protected static void borrarUsuario(Usuario obj, Response Res){
         
     }
-    public static List<Usuario> obtenerTodos(){
-        return null;
+    protected static void obtenerTodos(Response res){
+        
     }
-    public static Usuario consultarUsuarioNombre(Usuario obj){
-        return null;
+    protected static void consultarUsuarioNombre(Usuario obj, Response Res){
+        
     }
-    public static void crearUsuario(Usuario obj) {
+    protected static void crearUsuario(Usuario obj, Response Res) {
         
     }
 }

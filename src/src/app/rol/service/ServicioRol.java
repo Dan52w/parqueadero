@@ -1,20 +1,20 @@
 package src.app.rol.service;
 
-import java.net.ResponseCache;
 import java.util.List;
 import src.app.rol.model.Rol;
+import src.middleware.Response;
 
 public class ServicioRol {
-    public void actualizarRol(Rol objRol, ResponseCache res) {
+    protected static void actualizarRol(Rol objRol, Response res) {
         
     }
-    public static void borrar(Rol obj, ResponseCache res) {
+    protected static void borrar(Rol obj, Response res) {
         
     }
-    public static List<Rol> obtenerTodos() {
-        return null;
+    protected static void obtenerTodos() {
+        
     }
-    public static void grabarRol(Rol obj, ResponseCache res) {
+    protected static void grabarRol(Rol obj, Response res) {
         
     }
 }

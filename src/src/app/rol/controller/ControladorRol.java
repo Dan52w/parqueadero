@@ -1,25 +1,20 @@
 package src.app.rol.controller;
 
-import java.net.Authenticator;
-import java.net.ResponseCache;
 import src.app.rol.service.ServicioRol;
+import src.middleware.Request;
+import src.middleware.Response;
 
-public class ControladorRol {
-    private final ServicioRol servicioRol;
-
-    public ControladorRol(ServicioRol servicioRol) {
-        this.servicioRol = servicioRol;
-    }
-    public void llamarActualizar(Authenticator.RequestorType req, ResponseCache res) {
+public class ControladorRol extends ServicioRol{
+    public void llamarActualizar(Request req, Response res) {
         
     }
-    public void llamarRolBorrar(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarRolBorrar(Request req, Response res){
         
     }
-    public void llamarObtenerTodos(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarObtenerTodos(Request req, Response res) {
         
     }
-    public void llamarGrabarRol(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarGrabarRol(Request req, Response res) {
         
     }
 }

@@ -1,25 +1,26 @@
 package src.app.vehiculo.service;
 
-import java.net.ResponseCache;
-import java.util.List;
 import src.app.vehiculo.model.Vehiculo;
+import src.middleware.Response;
+
+
 
 
 public class ServicioVehiculo {
 
-    public void actualizarVehiculo(Vehiculo objVehiculo, ResponseCache res) {
+    protected static void actualizarVehiculo(Vehiculo objVehiculo, Response res) {
 
     }
 
-    public static void borrar(Vehiculo objVehiculo, ResponseCache res) {
+    protected static void borrar(Vehiculo objVehiculo,Response res) {
 
     }
 
-    public static List<Vehiculo> obtenerTodos() {
-        return null;
+    protected static void obtenerTodos(Response res) {
+
     }
 
-    public static void grabarVehiculo(Vehiculo objVehiculo, ResponseCache res) {
+    protected static void grabarVehiculo(Vehiculo obj, Response res) {
 
     }
 }

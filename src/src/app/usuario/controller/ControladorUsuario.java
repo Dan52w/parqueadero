@@ -1,30 +1,23 @@
 package src.app.usuario.controller;
 
-import java.net.Authenticator;
-import java.net.ResponseCache;
-import java.util.List;
-import src.app.usuario.model.Usuario;
 import src.app.usuario.service.ServicioUsuario;
+import src.middleware.Request;
+import src.middleware.Response;
 
-public class ControladorUsuario {
-    private final ServicioUsuario servicioUsuario;
-
-    public ControladorUsuario(ServicioUsuario servicioUsuario) {
-        this.servicioUsuario = servicioUsuario;
-    }
-    public static void llamarActualizarUsuario(Authenticator.RequestorType req, ResponseCache res){
+public class ControladorUsuario extends ServicioUsuario{
+    public void llamarActualizarUsuario(Request req, Response res){
         
     }
-    public static void llamarBorrarUsuario(Authenticator.RequestorType req, ResponseCache res){
+    public void llamarBorrarUsuario(Request req, Response res){
         
     }
-    public static List<Usuario> llamarObtenerTodo(Authenticator.RequestorType req, ResponseCache res) {
-        return null;
+    public void llamarObtenerTodo(Request req, Response res){
+        
     }
-    public static List<Usuario> llamarConsutalNombre(Authenticator.RequestorType req, ResponseCache res) {
-        return null;
+    public void llamarConsutalNombre(Request req, Response res) {
+        
     }
-    public void llamarCrearUsuario(Authenticator.RequestorType req, ResponseCache res){
+    public void llamarCrearUsuario(Request req, Response res){
         
     }
 }

@@ -1,29 +1,23 @@
 package src.app.tipoVehiculo.controller;
 
-import java.net.Authenticator;
-import java.net.ResponseCache;
 import src.app.tipoVehiculo.service.ServicioTipoVehiculo;
+import src.middleware.Request;
+import src.middleware.Response;
 
-public class ControladorTipoVehiculo {
-    private final ServicioTipoVehiculo servicioTipoVehiculo;
-
-    public ControladorTipoVehiculo(ServicioTipoVehiculo servicioTipoVehiculo) {
-        this.servicioTipoVehiculo = servicioTipoVehiculo;
-    }
-
-    public void llamarActualizarTipoVehiculo(Authenticator.RequestorType req, ResponseCache res) {
+public class ControladorTipoVehiculo extends ServicioTipoVehiculo {
+    public void llamarActualizarTipoVehiculo(Request req, Response res){
 
     }
 
-    public void llamarBorrarTipoVehiculo(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarBorrarTipoVehiculo(Request req, Response res){
 
     }
 
-    public void llamarObtenerTodosTipoVehiculo(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarObtenerTodosTipoVehiculo(Request req, Response res) {
 
     }
 
-    public void llamarGrabarTipoVehiculo(Authenticator.RequestorType req, ResponseCache res) {
+    public void llamarGrabarTipoVehiculo(Request req, Response res) {
 
     }
 }

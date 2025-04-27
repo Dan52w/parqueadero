@@ -1,23 +1,22 @@
 package src.app.tipoVehiculo.service;
 
-import java.net.ResponseCache;
-import java.util.List;
 import src.app.tipoVehiculo.model.TipoVehiculo;
+import src.middleware.Response;
 
 public class ServicioTipoVehiculo {
-    public void actualizarTipoVehiculo(TipoVehiculo objTipoVehiculo, ResponseCache res) {
+    protected void actualizarTipoVehiculo(TipoVehiculo objTipoVehiculo, Response Res) {
 
     }
 
-    public static void borrar(TipoVehiculo objTipoVehiculo, ResponseCache res) {
+    protected static void borrar(TipoVehiculo objTipoVehiculo, Response Res) {
 
     }
 
-    public static List<TipoVehiculo> obtenerTodos() {
-        return null;
+    protected static void obtenerTodos(Response Res) {
+        
     }
 
-    public static void grabarTipoVehiculo(TipoVehiculo objTipoVehiculo, ResponseCache res) {
+    protected static void grabarTipoVehiculo(TipoVehiculo objTipoVehiculo, Response Res) {
 
     }
 }
