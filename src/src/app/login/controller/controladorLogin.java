@@ -1,16 +1,22 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const ServicioLogin_1 = __importDefault(require("../service/ServicioLogin"));
-const Acceso_1 = __importDefault(require("../model/Acceso"));
-class ControladorLogin extends ServicioLogin_1.default {
-    llamarActualizarRol(req, res) {
-        console.log("Contraseña: ", req.body.contrasena);
-        const login = new Acceso_1.default(0, req.body.correo, req.body.contrasena, "");
-        ServicioLogin_1.default.hacerLogin(login, res);
+package src.app.login.controller;
+
+import java.net.Authenticator;
+import java.net.ResponseCache;
+import src.app.login.service.ServicioLogin;
+import src.app.login.model.Acceso;
+
+public class ControladorLogin {
+    private final ServicioLogin servicioLogin;
+    
+    public ControladorLogin(ServicioLogin servicioLogin) {
+        this.servicioLogin = servicioLogin;
     }
-}
-const controladorLogin = new ControladorLogin();
-exports.default = controladorLogin;
+    
+    public void llamarActualizarRol(Authenticator.RequestorType req, ResponseCache res) {
+        System.out.println("Contraseña: " + req.getRequestingScheme());
+        String correo = req.getRequestingHost();
+        String contrasena = req.getRequestingScheme(); 
+        
+        Acceso login = new Acceso(0, correo, contrasena, "");
+        servicioLogin.hacerLogin(login, res);
+    }
