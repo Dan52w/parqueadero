@@ -1,24 +1,23 @@
 package src.app.turno.service;
 
 import src.middleware.Response;
-import java.util.List;
 import src.app.turno.model.Turno;
 
 public class ServicioTurno {
 
-    public void actualizarTurno(Turno objTurno, Response Res) {
+    protected static void actualizarTurno(Turno objTurno, Response Res) {
         
     }
 
-    public static void borrar(Turno objTurno, Response res) {
+    protected static void borrar(Turno objTurno, Response res) {
         
     }
 
-    public static List<Turno> obtenerTodos() {
-        return null;
+    protected static void obtenerTodos(Response res) {
+        
     }
 
-    public static void grabarTurno(Turno objTurno, Response res) {
+    protected static void grabarTurno(Turno objTurno, Response res) {
         
     }
 }
