@@ -1,17 +1,22 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = require("express");
-const ControladorLogin_1 = __importDefault(require("../controller/ControladorLogin"));
-const ValidatorLogin_1 = require("../../../config/domain/ValidatorLogin");
-const Validar_1 = __importDefault(require("../../../middleware/Validar"));
-class RutaLogin {
-    constructor() {
-        this.rutaLoginApi = (0, express_1.Router)();
-        this.rutaLoginApi.post("/login", ValidatorLogin_1.datosLoginCrear, Validar_1.default.datos, ControladorLogin_1.default.llamarActualizarRol);
+package src.app.login.route;
+
+import java.util.List;
+import src.app.login.model.Login;
+import src.app.login.controller.ControladorLogin;
+import src.config.domain.ValidatorLogin;
+import src.middleware.Validar;
+
+public class RutaLogin {
+    private ControladorLogin controladorLogin;
+
+    public RutaLogin() {
+        this.controladorLogin = new ControladorLogin();
+    }    
+    public Login login(Login loginDTO) {
+        // Aquí iría la lógica equivalente a los middleware ValidatorLogin y Validar.datos
+        if (ValidatorLogin.validarDatosLogin(loginDTO) && Validar.datos(loginDTO)) {
+            return controladorLogin.llamarActualizarRol(loginDTO);
+        }
+        return null;
     }
 }
-const rutaLogin = new RutaLogin();
-exports.default = rutaLogin.rutaLoginApi;
